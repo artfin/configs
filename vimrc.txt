@@ -1,0 +1,104 @@
+set nocompatible " required
+filetype off     " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+" call vundle#begin('~/somepath')
+
+" let Vundle manage Vundle, required
+" Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-scripts/indentpython.vim'
+
+" auto complete (under the hood uses a few different auto-completers
+Plugin 'Valloric/YouCompleteMe'
+
+" you can have VIM check your syntax on each save with the syntactic extension
+Plugin 'vim-syntastic/syntastic'
+" also add PEP8 checking
+Plugin 'nvie/vim-flake8'
+" making code pretty with this plugin
+let python_highlight_all=1
+syntax on
+
+" color schemes
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
+
+" powerline -- is a status bar that displays things like the current
+" virtualenv, git branch, files being edite, and much more.
+" (written in python)
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" vim close pair (A VIM plugin to find last opening brace and inser
+" corresponding closing brace)
+Plugin 'tranvansang/vim-close-pair'
+
+" numbers.vim is a plugin for intelligently toggling line numbers
+" this plugin alternates between relative numbering (relativenumber) and
+" absolute numbering (number) for the active window depending on the mode you
+" are ing. 
+Plugin 'myusuf3/numbers.vim'
+
+
+" All of your plugins must be added before the following line
+call vundle#end()  " required
+filetype plugin indent on " required
+
+" show existing tab with 4 spaces width
+" set tabstop=4
+" when indenting with '>', user 4 spaces width
+" set shiftwidth=4
+" On pressing tab, insert 4 spaces
+" set expandtab
+
+" to add numbering
+" set number
+
+syntax on
+
+" you can also specify different areas of the creeen where the splits should
+" occur
+set splitbelow
+set splitright
+
+" jumping between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" to add the proper PEP8 indentation
+au BufNewFile, BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" defining BadWhitespace before using in a match
+highlight BadWhitespace ctermbg=red guibg=darkred
+" flagging unnecessary whitespace
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" utf-8 support
+set encoding=utf-8
+
+" few customizations for YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" a bit of logic to define which scheme to use based upon the VIM mode
+if has('gui_running')
+	set background=dark
+	colorscheme solarized
+else
+	colorscheme zenburn
+endif
+
+
+
