@@ -29,5 +29,12 @@
  4. builtins: ```sudo -H python -m pip install future```
  5. lxml: ```sudo -H python -m pip install lxml``` (HTML-markup parser for ```bs4```)
 
+# Crontab info
 
+* Setting environment variables  <br />
+```SHELL=/bin/sh```  <br />
+```PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin```
+
+* ```timeout``` for terminating hanging processes  <br />
+``` /usr/bin/timeout 5m```
 
