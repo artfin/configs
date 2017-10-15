@@ -39,19 +39,19 @@ My configs for ```vim``` and ```i3wm```:
 ``` /usr/bin/timeout 5m```
 
 # Example 
-// Environment variable
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/sbin:/usr/bin
+// Environment variable <br />
+```SHELL=/bin/sh```
+```PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/sbin:/usr/bin```
 
-// -----------------------------------------------------
-// ps axo pid,etime,args -- to see id of process and  its execution time
-// -----------------------------------------------------
+// ----------------------------------------------------- <br />
+// ```ps axo pid,etime,args -- to see id of process and  its execution time``` <br />
+// ----------------------------------------------------- <br />
 
-// -----------------------------------------------------
-// adding timeout command to terminate hanging processes
-// -----------------------------------------------------
+// ----------------------------------------------------- <br />
+// adding timeout command to terminate hanging processes <br />
+// ----------------------------------------------------- <br />
 
-*/2 * * * * /usr/bin/timeout 3m /home/ubuntu/Steamdaemon/steamdaemon/usr/terol983/scripts/_buyorder_checker.sh
-*/2 * * * * /usr/bin/timeout 3m /home/ubuntu/Steamdaemon/steamdaemon/usr/terol983/scripts/_sellorder_checker.sh
-0,20,40 * * * * /usr/bin/timeout 9m /home/ubuntu/Steamdaemon/steamdaemon/usr/terol983/scripts/_buyorder_installer.sh
+```*/2 * * * * /usr/bin/timeout 3m /home/ubuntu/Steamdaemon/steamdaemon/usr/terol983/scripts/_buyorder_checker.sh```
+```*/2 * * * * /usr/bin/timeout 3m /home/ubuntu/Steamdaemon/steamdaemon/usr/terol983/scripts/_sellorder_checker.sh```
+```0,20,40 * * * * /usr/bin/timeout 9m /home/ubuntu/Steamdaemon/steamdaemon/usr/terol983/scripts/_buyorder_installer.sh```
 
