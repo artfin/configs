@@ -5,10 +5,12 @@ My configs for ```vim``` and ```i3wm```:
 	*  System San Fransisco Font files should be put in ~/.fonts (just drop there all the ```.ttf```-files)
 
 # Zsh
-Oh My Zsh framework: https://ohmyz.sh/
+`Oh My Zsh` framework: https://ohmyz.sh/
 Current theme of choice: af-magic
-Autosuggestions plugin: https://github.com/zsh-users/zsh-autosuggestions 
-z plugin: https://github.com/rupa/z
+Autosuggestions plugin: https ://github.com/zsh-users/zsh-autosuggestions
+z plugin:               https ://github.com/rupa/z
+zsh-autocomplete:       https ://github.com/marlonrichert/zsh-autocomplete
+zsh-interactive-cd:     https ://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/zsh-interactive-cd
 
 # Clean installation and preparation of Python2.7 on Ubuntu server
 

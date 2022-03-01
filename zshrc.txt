@@ -10,6 +10,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="af-magic"
 
+# zsh-autocomplete plugin:
+# https://github.com/marlonrichert/zsh-autocomplete 
+source /home/artfin/.zsh_autocomplete/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -72,8 +76,9 @@ ZSH_THEME="af-magic"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    zsh-autosuggestions
     z
+    zsh-autosuggestions
+    zsh-interactive-cd
 )
 
 source $ZSH/oh-my-zsh.sh
